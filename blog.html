@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert reviews and guides for pet supplies. Find the best dog toys, cat grooming products, and more.">
+    <meta name="keywords" content="pet supplies, dog toys, cat grooming, pet product reviews">
+    <title>Pet Supplies Hub - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Pet Supplies Hub</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-categories">
+            <h2>Categories</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="dog-toys">Dog Toys</button>
+                <button class="filter-btn" data-category="cat-grooming">Cat Grooming</button>
+            </div>
+        </section>
+
+        <section class="blog-posts">
+            <article class="blog-post">
+                <img src="images/kong-toy.jpg" alt="KONG Classic Dog Toy" class="post-image">
+                <h2><a href="blog/best-dog-toys.html">Best Dog Toys Under $20</a></h2>
+                <p>Discover the top affordable dog toys that will keep your furry friend entertained for hours.</p>
+                <span class="category-tag">Dog Toys</span>
+            </article>
+            <article class="blog-post">
+                <img src="images/hertzko-brush.jpg" alt="Hertzko Self Cleaning Slicker Brush" class="post-image">
+                <h2><a href="blog/best-cat-grooming.html">The Ultimate Guide to Cat Grooming</a></h2>
+                <p>Learn how to keep your cat's coat healthy and shiny with these essential grooming tools.</p>
+                <span class="category-tag">Cat Grooming</span>
+            </article>
+        </section>
+
+        <section class="newsletter">
+            <h2>Stay Updated!</h2>
+            <div class="newsletter-form">
+                <p>Sign up for our newsletter to get the latest pet product reviews and tips</p>
+                <!-- Add your Mailchimp form code here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Pet Supplies Hub. All rights reserved.</p>
+            <p>As an Amazon Associate, I earn from qualifying purchases.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Category filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogPosts = document.querySelectorAll('.blog-post');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+                blogPosts.forEach(post => {
+                    if (category === 'all') {
+                        post.style.display = 'block';
+                    } else {
+                        const postCategory = post.querySelector('.category-tag').textContent;
+                        post.style.display = postCategory === category ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

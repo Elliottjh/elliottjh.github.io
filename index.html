@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best pet supplies for your furry friends. Expert reviews and guides for dog toys, cat grooming, and more.">
+    <meta name="keywords" content="pet supplies, dog toys, cat grooming, pet products, pet care">
+    <title>Pet Supplies Hub - Expert Reviews for Your Furry Friends</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Pet Supplies Hub</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Top Pet Products for Your Furry Friends</h1>
+                <p>Expert reviews and guides to help you find the best pet supplies</p>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="images/kong-toy.jpg" alt="KONG Classic Dog Toy" class="product-image">
+                    <h3>KONG Classic Dog Toy</h3>
+                    <p>Durable rubber toy for hours of play</p>
+                    <a href="blog/best-dog-toys.html" class="cta-button">Read Guide</a>
+                </article>
+                <article class="product-card">
+                    <img src="images/hertzko-brush.jpg" alt="Hertzko Self Cleaning Slicker Brush" class="product-image">
+                    <h3>Hertzko Self Cleaning Slicker Brush</h3>
+                    <p>Gentle grooming for all coat types</p>
+                    <a href="blog/best-cat-grooming.html" class="cta-button">Read Guide</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Stay Updated!</h2>
+            <div class="newsletter-form">
+                <p>Sign up for our newsletter to get the latest pet product reviews and tips</p>
+                <!-- Add your Mailchimp form code here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Pet Supplies Hub. All rights reserved.</p>
+            <p>As an Amazon Associate, I earn from qualifying purchases.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
